@@ -13,7 +13,6 @@ var app = http.createServer(function(request,response){
     }
     response.writeHead(200);
 	console.log(__dirname + _url);
-	console.log(__dirname + _url);
     response.end(fs.readFileSync(__dirname + _url));
 
 });
