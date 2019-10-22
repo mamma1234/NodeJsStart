@@ -16,7 +16,7 @@ var app = http.createServer(function(request,response){
     response.writeHead(200);
 	//console.log(__dirname + _url);
     //response.end(fs.readFileSync(__dirname + _url));
-    var templat=`
+    var template=`
     <!doctype html>
 <html>
 <head>
@@ -26,9 +26,9 @@ var app = http.createServer(function(request,response){
 <body>
   <h1><a href="index.html">WEB</a></h1>
   <ol>
-    <li><a href="1.html">HTML</a></li>
-    <li><a href="2.html">CSS</a></li>
-    <li><a href="3.html">JavaScript</a></li>
+    <li><a href="/?id=HTML">HTML</a></li>
+    <li><a href="/?id=CSS">CSS</a></li>
+    <li><a href="/?id=JavaScript">JavaScript</a></li>
   </ol>
   <h2>${title}</h2>
   <p><a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 speicification">Hypertext Markup Language (HTML)</a> is the standard markup language for <strong>creating <u>web</u> pages</strong> and web applications.Web browsers receive HTML documents from a web server or from local storage and render them into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
@@ -38,6 +38,6 @@ var app = http.createServer(function(request,response){
 </body>
 </html>
     `;
-	response.end(templat);
+	response.end(template);
 });
 app.listen(3000);
